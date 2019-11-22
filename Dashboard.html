@@ -1,0 +1,134 @@
+<html>
+
+    <head>
+        <script src="Jquery.js"></script>
+        <script src = 'https://code.jquery.com/jquery-3.3.1.js'></script>
+        <script src="DataTables/datatables.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src = 'Dashboard.js'></script>
+    
+        <link rel = 'stylesheet' href = 'Dashboard.css'>
+        <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+        <meta name="viewport" content="user-scalable=no, width=device-width" />
+    </head>
+    
+    <body>
+        
+        <div id = 'container'>
+            <div id = 'header'>
+                <div id = 'pagename'>Krusty Krab</div>
+                <div id = 'logout'>Log Out</div>
+            </div>
+            <input id = 'file-upload' type = 'file' multiple="multiple">
+            <div id = 'contents'>
+            
+                <div id = 'sidebar'>
+                    <div class = 'profile'>
+                        <div id = 'profimage'></div>
+                        <div id = 'info'>
+                            <div id = 'name'>Eugene Krabs</div>
+                            <div id = 'position'>Owner</div>
+                        </div>
+                    </div>
+                    <div id = 'addnewfile'>
+                        <image id = 'fileicon' src = 'Images/File%20Icon.png'></image>
+                        <div id = 'addfiletext'>Add File</div>
+                    </div>
+                    <div id = 'separator'></div>
+                    <div id = 'navigation'>Navigation</div>
+                    <div id = 'dashboard'>
+                        <image id = 'dashboard-icon' src = 'Images/Bar%20Icon%20Selected.png'/>
+                        <span id = 'dashtxt'>Dashboard</span>
+                    </div>
+                    <div id = 'sales'>
+                        <image id = 'sales-icon' src = 'Images/Sales%20Icon.png'/>
+                        <span id = 'salestxt'>All Sales</span>
+                    </div>
+                    <div id = 'dailysales'>
+                        <image id = 'dailysales-icon' src = 'Images/Dashboard%20Icon.png'/>
+                        <span id = 'dailysalestxt'>Daily Sales</span>
+                    </div>
+                </div>
+                
+                <div id = 'display-container'>
+                    <div id = 'charts'>
+                        <div id = 'upper'>
+                            <div id = 'combo'>
+                                <div id = 'comboheader'>
+                                    <span id = 'deluxeheadertext'>Krusty Combo Sales by Species</span>
+                                </div>
+                                <div id = 'combochartlimiter'>
+                                    <canvas id = 'combochart'></canvas>
+                                </div>
+                            </div>
+                            <div id = 'pattie'>
+                                <div id = 'pattieheader'>
+                                    <span id = 'deluxeheadertext'>Krabby Pattie Sales by Species</span>
+                                </div>
+                                <div id = 'pattiechartlimiter'>
+                                    <canvas id = 'pattiechart'></canvas>
+                                </div>
+                            </div>
+                            <div id = 'deluxe'>
+                                <div id = 'deluxeheader'>
+                                    <span id = 'deluxeheadertext'>Krusty Deluxe Sales by Species</span>
+                                </div>
+                                <div id = 'deluxechartlimiter'>
+                                    <canvas id = 'deluxechart'></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div id = 'lower'>
+                            <div id = 'grub-bar-chart'>
+                                <div id = 'grubheader'>
+                                    <span id = 'grubheadertext'>Burger Sales</span>
+                                </div>
+                                <div id = 'grubchartlimiter'>
+                                    <canvas id = 'grubchart'></canvas>
+                                </div>
+                            </div>
+                            <div id = 'order-by-hour'>
+                                <div id = 'hourheader'>
+                                    <span id = 'hourheadertext'>Customer Demographic</span>
+                                </div>
+                                <div id = 'hourchartlimiter'>
+                                    <canvas id = 'hourchart'></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div id = 'table'>
+                        <div id = 'tableheader'><span id = 'tableheadertext'>All Sales</span></div>
+                        <div id = 'tableholder'>
+                            <table id = 'sales-table'>
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Burger</th>
+                                        <th>Species</th>
+                                        <th>Date and Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>   
+                    </div>
+                    <div id = 'linegraph'>
+                        <div id = 'lineheader'><span id = 'lineheadertext'>Monthly Sales</span></div>
+                        <div id = 'lineholder'>
+                            <canvas id = 'dailyylinechart'></canvas>
+                        </div>
+                    </div>
+                    <div id = 'loader'>
+                        <div class="loaderr"><div id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>Loading....</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    
+    </body>
+    
+</html>

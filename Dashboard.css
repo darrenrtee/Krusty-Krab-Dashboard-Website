@@ -1,0 +1,685 @@
+@font-face{
+    src: url('Fonts/Nunito-SemiBold.ttf');
+    font-family: nunito;
+}
+
+@font-face{
+    src: url('Fonts/BebasNeue-Bold.ttf');
+    font-family: raleway;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #d9e0e7;
+}
+
+#container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #d9e0e7;
+}
+
+#header{
+    position: relative;
+    width: 100%;
+    height: 49px;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFF;
+    align-content: center;
+    align-items: center;
+    border-bottom: 1px solid #00acac;
+}
+
+#pagename{
+    position: relative;
+    height: 100%;
+    width: 200px;
+    font-family: raleway;
+    color: black;
+    line-height: 50px;
+    margin-left: 20px;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+#pagename:hover{
+    cursor: pointer;
+}
+
+#logout{
+    border-radius: 3px;
+    text-align: center;
+    line-height: 30px;
+    position: relative;
+    margin-left: auto;
+    right: 20px;
+    height: 30px;
+    width: 80px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-family: nunito;
+    background-color: white;
+    border: 1px solid #00acac;
+    color: black;
+}
+
+#logout:hover{
+    background-color: #00acac;
+    color: white;
+    cursor: pointer;
+}
+
+#contents{
+    position: relative;
+    width: calc(100% - 20px);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #d9e0e7;
+    
+}
+
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 220px;
+    background-color: #2d353c;
+}
+
+.profile{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background-color: #2d353c;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #242a31;
+}
+
+.profile:hover:before{
+    opacity: .6;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.profile:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(Images/Cover%20Photo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .2;
+    transition-duration: 0.5s;
+}
+
+#profimage{
+    margin-top: 24px;
+    margin-left: 20px;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    background-image: url(Images/KrabsIcon2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(255,255,255,.75);
+}
+
+#profimage:hover{
+    cursor: pointer;
+}
+
+#info{
+    position: relative;
+    width: 180px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+#info:hover{
+    cursor: pointer;
+}
+
+#name{
+    font-size: 14px;
+    font-family: nunito;
+    color: white;
+    margin-bottom: 5px;
+}
+
+#position{
+    font-size: 12px;
+    color: rgb(255,255,255,.75);
+    font-family: nunito;
+}
+
+#addnewfile{
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 180px;
+    height: 50px;
+    background-color: #2d353c;
+    border : 1px dashed #00acac;
+}
+
+#addnewfile:hover{
+    cursor: pointer;
+    background-color: #00acac;
+}
+
+#addfiletext{
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    font-size: 12px;
+    font-family: nunito;
+    margin-bottom: 2px;
+}
+
+#fileicon{
+    margin-top: 1px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#separator{
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: #242a31;
+}
+
+#navigation{
+    width: 180px;
+    height: 20px;
+    margin-top: 15px;
+    margin-bottom: 3px;
+    margin-left: 20px;
+    font-size: 11px;
+    color: #889097;
+    letter-spacing: 0.5px;
+    font-family: nunito;
+}
+
+#dashboard{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+    height: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    padding-right: 20px;    
+    position: relative;
+    background-color: #242a31 ;
+}
+
+#dashboard-icon{
+    width: 15px;
+    height: 15px;
+}
+
+#dashtxt{
+    margin-left: 10px;
+    line-height: 18px;
+    font-size: 13px;
+    font-family: nunito;
+    color: white;
+}
+#dashboard:hover{
+    cursor: pointer;
+}
+#sales{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+    height: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    background-color: #2d353c;
+}
+
+#sales:hover{
+    cursor: pointer;
+}
+
+#salestxt{
+    margin-left: 10px;
+    line-height: 18px;
+    font-size: 13px;
+    font-family: nunito;
+    color: #a8acb1;
+}
+
+#sales-icon{
+    opacity: 0.6;
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+}
+
+#dailysales{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+    height: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    background-color: #2d353c;
+}
+
+#dailysales:hover{
+    cursor: pointer;
+}
+
+#dailysalestxt{
+    margin-left: 10px;
+    line-height: 18px;
+    font-size: 13px;
+    font-family: nunito;
+    color: #a8acb1;
+}
+
+#dailysales-icon{
+    opacity: 0.6;
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+}
+
+#display-container{
+    margin-left: 30px;
+    margin-top: 20px;
+    height: calc(100% - 40px);
+    width: calc(100% - 30px);
+    background-color: white;
+    border-radius: 3px;
+}
+
+#charts{
+    position: relative;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: #d9e0e7;
+}
+
+#upper{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: calc(50% - 10px);
+}
+
+#combo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: calc(33.3% - 10px);
+    background-color: white;
+    border-radius: 3px;
+}
+
+#comboheader{
+    color: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #242a30;
+    width: 100%;
+    height: 40px;
+    font-family: nunito;
+    font-size: 14px;
+}
+
+#comboheadertext{
+    margin-left: 10px;
+    line-height: 40px;
+    height: 40px;
+    font-family: nunito;
+    font-size: 18px;
+}
+
+#combochartlimiter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#pattie{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: calc(33.3% - 10px);
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+#pattieheader{
+    color: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #242a30;
+    width: 100%;
+    height: 40px;
+    font-family: nunito;
+    font-size: 14px;
+}
+
+#pattieheadertext{
+    margin-left: 10px;
+    line-height: 40px;
+    height: 40px;
+    font-family: nunito;
+    font-size: 18px;
+}
+
+#pattiechartlimiter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#deluxe{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: calc(33.3% - 10px);
+    background-color: white;
+    border-radius: 3px;
+}
+
+#deluxeheader{
+    color: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #242a30;
+    width: 100%;
+    height: 40px;
+    font-family: nunito;
+    font-size: 14px;
+}
+
+#deluxeheadertext{
+    margin-left: 10px;
+    line-height: 40px;
+    height: 40px;
+    font-family: nunito;
+    font-size: 18px;
+}
+
+#deluxechartlimiter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#lower{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+    height: calc(50% - 10px);
+}
+
+#grub-bar-chart{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: calc(50% - 10px);
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+#grubheader{
+    color: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #242a30;
+    width: 100%;
+    height: 40px;
+    font-family: nunito;
+    font-size: 14px;
+}
+
+#grubheadertext{
+    margin-left: 10px;
+    line-height: 40px;
+    height: 40px;
+    font-family: nunito;
+    font-size: 18px;
+}
+
+#grubchartlimiter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#order-by-hour{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: calc(50% - 10px);
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+#hourheader{
+    color: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #242a30;
+    width: 100%;
+    height: 40px;
+    font-family: nunito;
+    font-size: 14px;
+}
+
+#hourheadertext{
+    margin-left: 10px;
+    line-height: 40px;
+    height: 40px;
+    font-family: nunito;
+    font-size: 18px;
+}
+
+#hourchartlimiter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#hourchart{
+    width: 100%;
+    height: 100%;
+}
+
+#table{
+    border-radius: 10px;
+    position: relative;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+}
+
+#tableheader{
+   
+    color: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #242a30;
+    width: 100%;
+    height: 40px;
+    font-family: nunito;
+    font-size: 14px;
+}
+
+#tableheadertext{
+    margin-left: 10px;
+    line-height: 40px;
+    height: 40px;
+    font-family: nunito;
+    font-size: 18px;
+}
+
+#tableholder{
+    position: relative;
+    width: calc (100% - 40px);
+    height: calc (100% - 10px);
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#sales-table{
+    font-family: nunito;
+    position: relative;
+    width: 100%; 
+    height: 100%;
+}
+
+td{
+    font-size: 14px;
+}
+
+label{
+    font-family: nunito;
+}
+
+#linegraph{
+    position: relative;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: #d9e0e7;
+    background-color: white;
+}
+
+#lineheader{
+   
+    color: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #242a30;
+    width: 100%;
+    height: 40px;
+    font-family: nunito;
+    font-size: 14px;
+}
+
+#lineheadertext{
+    margin-left: 10px;
+    line-height: 40px;
+    height: 40px;
+    font-family: nunito;
+    font-size: 18px;
+}
+
+#lineholder{
+    position: relative;
+    width: calc (100% - 40px);
+    height: calc (100% - 10px);
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#loader{
+    border-radius: 10px;
+    position: relative;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    background-color: white;
+}
+#loading-bar-spinner.spinner {
+    left: 50%;
+    margin-left: -20px;
+    top: 50%;
+    margin-top: -20px;
+    position: absolute;
+    z-index: 19 !important;
+    animation: loading-bar-spinner 400ms linear infinite;
+}
+
+#loading-bar-spinner.spinner .spinner-icon {
+    width: 40px;
+    height: 40px;
+    border:  solid 4px transparent;
+    border-top-color:  #00C8B1 !important;
+    border-left-color: #00C8B1 !important;
+    border-radius: 50%;
+}
+
+@keyframes loading-bar-spinner {
+  0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+#file-upload{
+    display: none;
+}

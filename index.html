@@ -1,0 +1,29 @@
+<html>
+
+    <head>
+        
+        <title>K r u s t y K r a b</title>
+        <link rel="stylesheet" href="homepage.css">
+        <script src="Jquery.js"></script>
+        <script src="homepage.js"></script>
+        
+    </head>
+
+    <body>
+        <div id="burger" onclick="playVid()"></div>
+        <video src="media/videoplayback.mp4" id="burgvid" onclick="pauseVid()"></video>
+        <video src="media/boatwash.mp4" id="boatvid" onclick="pauseVid2()"></video>
+        <div id="placeholder">
+            <div id="container">
+                <p style="font-size: 80px">Krusty Krab</p>
+                <p class="yeet">Username: </p>
+                <input type="text" id="u">
+                <p class="yeet">Password: </p>
+                <input type="password" id="p">
+                <button onclick="login()" id="login">Log In</button>
+            </div>
+        </div>
+        
+    </body>
+    
+</html>

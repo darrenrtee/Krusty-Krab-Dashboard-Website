@@ -1,0 +1,112 @@
+@font-face{
+    src: url('Fonts/Nunito-SemiBold.ttf');
+    font-family: nunito;
+}
+
+@font-face{
+    src: url('Fonts/BebasNeue-Bold.ttf');
+    font-family: raleway;
+}
+
+body{
+    background-color: #2d353c;
+}
+
+#burger{
+    position: absolute;
+    content: url(Images/burg.png);
+    right: 20px;
+    top: 20px;
+    height: 40px;
+}
+
+#burger:hover{
+    cursor: pointer;
+}
+
+#placeholder{
+    margin-top: ;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d353c;
+}
+
+#container{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+p{
+    margin-top: 0px;
+    color: #d9e0e7;
+    font-family: raleway;
+}
+
+p:hover{
+    cursor: default;
+}
+
+input{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #d9e0e7;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 25px;
+    background-color: #2d353c;
+    color: #d9e0e7;
+}
+
+input:hover{
+    border-color: #00acac;
+}
+
+.yeet{
+    margin-bottom: 0px;
+    width: 200px;
+    text-align: left;
+    font-family: nunito;
+}
+
+button{
+    width: 200px;
+    height: 25px;
+    background-color: #2d353c;
+    color: #d9e0e7;
+    border-color: #d9e0e7;
+    border-radius: 3px;
+    border-width: thin;
+}
+
+button:hover{
+    border-color: #00acac;
+    color: #00acac;
+    cursor: pointer;
+}
+
+video{
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    display: none;
+}
+
+#boatvid{
+    position: fixed;
+    width: 30%;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+}
